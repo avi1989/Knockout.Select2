@@ -1,16 +1,30 @@
 ﻿@{
     ViewBag.Title = "Index";
 }
+<h1>Select 2 Sample</h1>
+<section>
+    <h2>Simple binding</h2>
 
-<h2>Select 2 Sample</h2>
+    <h3 data-bind="text:test"></h3>
 
-<h3 data-bind="text:test"></h3>
-
-
+    <input id="select" data-bind="ko_select2: selectedColor, settings: { width: '100px', optionsValue: 'Id', save: 'entity', optionsText: 'Country', multiple: true, url: '/api/DefaultApi/GetCountry', queryParam:'q' }"/>
+@*    <input id="select" data-bind="ko_select2:selectedColor , settings: { width: '100px', data:colorList, optionsValue:'Id', save:'entity', optionsText:'Name', data:colorList,multiple:true,}"/>*@
+@*    <input id="basicSelect" data-bind="ko_select2:selectedColor , settings: { width: '100px', data:colorListBasic}"/>*@
+    
+    <br/>
+    <span data-bind="text:'Id=' + selectedColor().name"></span>
+    
+    <button data-bind="click:debugMe">Debug</button>
+</section>
 <script src="~/Scripts/ViewModels/Index.js"></script>
 <script>
     $(document).ready(function () {
         var vm = IndexVM();
+        debugger;
         ko.applyBindings(vm);
+
+        $.ajax('/api/DefaultApi/GetList').then(function(data) {
+            debugger;
+        });
     });
 </script>

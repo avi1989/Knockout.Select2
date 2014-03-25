@@ -40,6 +40,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
@@ -69,9 +73,6 @@
     <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http">
     </Reference>
@@ -126,6 +127,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\DefaultApiController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -133,6 +135,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\css\select2-spinner.gif" />
+    <Content Include="Content\css\select2.css" />
+    <Content Include="Content\css\select2.png" />
+    <Content Include="Content\css\select2x2.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -205,6 +211,49 @@
     <Content Include="Scripts\DefaultScripts\knockout-2.2.0.js" />
     <Content Include="Scripts\DefaultScripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\DefaultScripts\_references.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_ar.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_bg.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_ca.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_cs.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_da.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_de.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_el.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_es.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_et.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_eu.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_fa.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_fi.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_fr.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_gl.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_he.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_hr.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_hu.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_id.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_is.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_it.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_ja.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_ko.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_lt.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_lv.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_mk.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_ms.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_nl.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_no.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_pl.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_pt-BR.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_pt-PT.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_ro.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_ru.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_sk.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_sv.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_th.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_tr.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_ua.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_vi.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_zh-CN.js" />
+    <Content Include="Scripts\Select2\Select2-locales\select2_locale_zh-TW.js" />
+    <Content Include="Scripts\Select2\select2.js" />
+    <Content Include="Scripts\Select2\select2.min.js" />
     <Content Include="Scripts\ViewModels\Index.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -218,11 +267,11 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\Knockout\Select2.Knockout.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Scripts\Knockout\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
