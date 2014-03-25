@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Select 2 Sample</h2>
+
+<h3 data-bind="text:test"></h3>
+
+
+<script src="~/Scripts/ViewModels/Index.js"></script>
+<script>
+    $(document).ready(function () {
+        var vm = IndexVM();
+        ko.applyBindings(vm);
+    });
+</script>

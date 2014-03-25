@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knockout.Select2", "Knockout.Select2\Knockout.Select2.csproj", "{87F7B47E-CDBF-45FD-AA8C-62C0CCAF6EDA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{87F7B47E-CDBF-45FD-AA8C-62C0CCAF6EDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87F7B47E-CDBF-45FD-AA8C-62C0CCAF6EDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87F7B47E-CDBF-45FD-AA8C-62C0CCAF6EDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87F7B47E-CDBF-45FD-AA8C-62C0CCAF6EDA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
