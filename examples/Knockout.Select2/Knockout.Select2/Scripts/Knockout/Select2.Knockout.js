@@ -1,9 +1,5 @@
 ﻿ko.bindingHandlers.ko_select2 = {
 
-    //Currently makes ajax calls. Requires query parameter to be q
-    //Currently does not support jsonpCallback or quietMillis or any other ajax call supported in the ajax call. Will be added soon
-    //Currently only supports 1 level of traversal.
-    // No support for paging yet.
     init: function (element, valueAccessor, allBindingsAccessor, viewModel) {
         debugger;
 
